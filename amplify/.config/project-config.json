@@ -1,17 +1,17 @@
 {
-    "projectName": "house-work-app",
-    "version": "2.0",
-    "frontend": "javascript",
-    "providers": [
-        "awscloudformation"
-    ],
-    "javascript": {
-        "framework": "angular",
-        "config": {
-            "SourceDir": "src",
-            "DistributionDir": "dist",
-            "BuildCommand": "npm run-script build",
-            "StartCommand": "ng serve"
-        }
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "housework",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "angular",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "dist/house-work-app",
+      "BuildCommand": "npm run-script build",
+      "StartCommand": "ng serve"
     }
+  }
 }
