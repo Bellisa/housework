@@ -110,5 +110,14 @@
       }
     }
   },
+  "cli": {
+    "analytics": false,
+    "cache": {
+      "enabled": false,
+      "path": ".cache",
+      "environment": "all"
+    },
+    "defaultCollection": "@angular-eslint/schematics"
+  },
   "defaultProject": "houseWork"
 }
