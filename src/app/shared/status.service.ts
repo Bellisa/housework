@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { catchError, map } from 'rxjs/operators';
+import { throwError } from 'rxjs/internal/observable/throwError';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +14,19 @@ export class StatusService {
 
   // Get the status
   getStatus() {
-    return this.http.get<any>(this.statusUrl);
+    return this.http.get<any>(this.statusUrl)
+      .pipe(
+        map((res: any) => {
+          console.log('api', res)
+        })
+        ,
+        catchError(error => {
+          console.log('error', error)
+          return throwError(error);
+        })
+      );
               // .toPromise()
-              // .then(response:Response => response.json())
+              //.then(response:Response => response.json())
               // .catch(this.error);
   }
 
