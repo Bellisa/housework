@@ -10,6 +10,11 @@
       "StackName": "amplify-housework-staging-205945",
       "StackId": "arn:aws:cloudformation:us-west-1:814146234628:stack/amplify-housework-staging-205945/11b07490-fb13-11ec-be2d-060d0830bb2f",
       "AmplifyAppId": "d7q8ss33p63x7"
+    },
+    "categories": {
+      "auth": {
+        "houseworkc410d5fc": {}
+      }
     }
   }
 }
