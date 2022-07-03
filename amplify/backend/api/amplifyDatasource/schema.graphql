@@ -1,0 +1,46 @@
+type CleanPlaceModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  locationmodelID: ID! @index(name: "byLocationModel")
+  title_place: String
+  instruction: String
+  TaskModels: [TaskModel] @hasMany(indexName: "byCleanPlaceModel", fields: ["id"])
+}
+
+type LocationModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  CleanPlaceModels: [CleanPlaceModel] @hasMany(indexName: "byLocationModel", fields: ["id"])
+}
+
+enum EUSERTYPE {
+  ADMIN
+  USER
+}
+
+enum ESTATUS {
+  CREATED
+  PROCESSING
+  FINISHED
+  APROVED
+}
+
+type TaskModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  description: String
+  status: ESTATUS
+  usermodelID: ID! @index(name: "byUserModel")
+  started_date: AWSDateTime
+  finished_date: AWSDateTime
+  plan_start_date: AWSDate
+  cleanplacemodelID: ID! @index(name: "byCleanPlaceModel")
+}
+
+type UserModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  login: String!
+  password: String!
+  name: String
+  taskmodels: [TaskModel] @hasMany(indexName: "byUserModel", fields: ["id"])
+  user_type: EUSERTYPE
+}
