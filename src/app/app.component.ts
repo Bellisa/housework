@@ -12,9 +12,13 @@ export class AppComponent implements OnInit  {
 
   constructor(private userService: UserService){}
   ngOnInit(): void {
+    
     this.userService.getUser('Dan', '123123').then(res => {
       console.log('dan get', res)
-      if (!res) {
+      if (res && res.length > 0) {
+        
+      }
+      else {
         this.userService.createUser('Dan', '123123', 'Danya', Eusertype.USER).then(
           result => {
             console.log('dan created', result)
@@ -25,7 +29,10 @@ export class AppComponent implements OnInit  {
     )
     this.userService.getUser('Dan', '123123').then(res => {
       console.log('Alex get', res)
-      if (!res) {
+      if (res && res.length > 0) {
+        
+      }
+      else  {
         this.userService.createUser('Alex', '12341234', 'Alexander', Eusertype.USER).then(
           result => {
             console.log('Alexander created', result)
@@ -36,7 +43,10 @@ export class AppComponent implements OnInit  {
   
     this.userService.getUser('Dan', '123123').then(res => {
       console.log('Olesya get', res)
-      if (!res) {
+      if (res && res.length > 0) {
+        
+      }
+      else  {
         this.userService.createUser('Olesya', '1234512345', 'Olesya', Eusertype.ADMIN).then(
           result => {
             console.log('Olesya created', result)
