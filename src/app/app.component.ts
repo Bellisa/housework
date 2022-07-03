@@ -14,6 +14,7 @@ export class AppComponent {
   ngOnInit() {
     this.statusService
       .getStatus().subscribe((result: any) => {
+        console.log('result', result)
         this.status = result.status;
       });
   }
