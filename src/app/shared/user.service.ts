@@ -19,4 +19,8 @@ export class UserService {
     })
   );
   }
+
+  async getUser(login: string, password: string) {
+    return await DataStore.query(UserModel, (user)=>user.login('eq', login).password('eq', password));
+  }
 }
