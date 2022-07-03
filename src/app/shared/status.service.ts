@@ -18,6 +18,7 @@ export class StatusService {
       .pipe(
         map((res: any) => {
           console.log('api', res)
+          return res;
         })
         ,
         catchError(error => {
