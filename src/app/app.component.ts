@@ -27,7 +27,7 @@ export class AppComponent implements OnInit  {
       }
     }
     )
-    this.userService.getUser('Dan', '123123').then(res => {
+    this.userService.getUser('Alex', '12341234').then(res => {
       console.log('Alex get', res)
       if (res && res.length > 0) {
         
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit  {
       }
     });
   
-    this.userService.getUser('Dan', '123123').then(res => {
+    this.userService.getUser('Olesya', '1234512345').then(res => {
       console.log('Olesya get', res)
       if (res && res.length > 0) {
         
