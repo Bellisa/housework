@@ -1,0 +1,34 @@
+<div class="z360-login-container">
+  <h1 class="authorization-form-logo logo2"></h1>
+  <form class="authorization-form center-block" name="loginForm" id="loginForm" role="form"
+        [formGroup]="loginForm"
+        (ngSubmit)="login()">
+    <div class="text-danger alert alert-danger" *ngIf="responseError" role="alert">{{responseError}}</div>
+
+    <div class="form-group">
+      <label for="email">Username</label>
+      <input class="form-control"
+             type="text"
+             placeholder="Username"
+             formControlName="email"
+             id="email">
+      <div class="text-danger" *ngIf="isFormControlInvalid('email')">
+        <span>Please enter Username</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input class="form-control"
+             type="password"
+             placeholder="Password"
+             formControlName="password"
+             id="password">
+      <div class="text-danger" *ngIf="isFormControlInvalid('password')">
+        <span>Please enter password</span>
+      </div>
+    </div>
+
+    <button class="btn btn-login" type="submit">Login</button>
+  </form>
+</div>
