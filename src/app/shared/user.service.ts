@@ -7,7 +7,9 @@ import { UserModel, Eusertype } from '../../models';
 })
 export class UserService {
 
-  constructor() { }
+  private user: UserModel | null;
+
+  constructor() { this.user = null;}
 
   async createUser(login: string, password: string, name: string, user_type: Eusertype) {
     return await DataStore.save(
@@ -16,11 +18,25 @@ export class UserService {
         password,
         name,
         user_type
-    })
-  );
+      })
+    );
   }
 
-  async getUser(login: string, password: string) {
-    return await DataStore.query(UserModel, (user)=>user.login('eq', login).password('eq', password));
+  async getUser(login: string, password: string):Promise<UserModel | null> {
+    const [result] = await DataStore.query(UserModel, (user) => user.login('eq', login).password('eq', password));
+   if(result){
+    console.log('result', result.login)
+    this.user = result;
+    return result;
+   }
+		
+    return null;
+  }
+  isAdmin(){
+    return this.user && this.user.user_type === Eusertype.ADMIN;
+  }
+
+  getUserDetails() {
+    return this.user;
   }
 }
