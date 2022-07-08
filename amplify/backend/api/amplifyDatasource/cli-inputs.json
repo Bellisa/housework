@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 30,
+      "apiKeyExpirationDate": "2022-08-07T21:04:09.454Z",
+      "keyDescription": "api key description"
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    },
+    "apiName": "amplifyDatasource",
+    "gqlSchemaPath": "/Users/olesyakurylenko/Public/work/homework/house_work_api/amplify/backend/api/amplifyDatasource/schema.graphql",
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ]
+  }
+}

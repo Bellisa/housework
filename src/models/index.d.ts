@@ -36,6 +36,7 @@ export declare class CleanPlaceModel {
   readonly title_place?: string | null;
   readonly instruction?: string | null;
   readonly TaskModels?: (TaskModel | null)[] | null;
+  readonly image_url?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<CleanPlaceModel, CleanPlaceModelMetaData>);
@@ -62,6 +63,7 @@ export declare class LocationModel {
   readonly id: string;
   readonly name?: string | null;
   readonly CleanPlaceModels?: (CleanPlaceModel | null)[] | null;
+  readonly image_url?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<LocationModel, LocationModelMetaData>);
@@ -75,6 +77,7 @@ export declare class UserModel {
   readonly name?: string | null;
   readonly taskmodels?: (TaskModel | null)[] | null;
   readonly user_type?: Eusertype | keyof typeof Eusertype | null;
+  readonly image_url?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<UserModel, UserModelMetaData>);

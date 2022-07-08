@@ -45,6 +45,13 @@ export const schema = {
                         "associatedWith": "cleanplacemodelID"
                     }
                 },
+                "image_url": {
+                    "name": "image_url",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -255,6 +262,13 @@ export const schema = {
                         "associatedWith": "locationmodelID"
                     }
                 },
+                "image_url": {
+                    "name": "image_url",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -351,6 +365,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "image_url": {
+                    "name": "image_url",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -413,5 +434,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "c8f772d82d765cdde26b228843ec1790"
+    "version": "652a3742d5dcbeab195f83c3fca3bafe"
 };

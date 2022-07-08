@@ -23,7 +23,9 @@ export class UserService {
   }
 
   async getUser(login: string, password: string):Promise<UserModel | null> {
+    console.log('getUser', login, password)
     const [result] = await DataStore.query(UserModel, (user) => user.login('eq', login).password('eq', password));
+    console.log('result2', result)
    if(result){
     console.log('result', result.login)
     this.user = result;
