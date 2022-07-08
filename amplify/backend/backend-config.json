@@ -5,16 +5,22 @@
       "providerPlugin": "awscloudformation",
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "description": "",
-              "apiKeyExpirationDays": 7
+              "apiKeyExpirationDays": 30,
+              "apiKeyExpirationDate": "2022-08-07T21:04:09.454Z",
+              "description": "api key description"
             }
           }
         }
-      }
+      },
+      "dependsOn": []
     }
   },
   "auth": {

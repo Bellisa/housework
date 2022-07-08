@@ -27,22 +27,23 @@ isFormControlInvalid(controlName: string): boolean {
 login() {
   if (this.loginForm.valid) {
     const { email, password } = this.loginForm.value;
-
+    console.log('email password', email, password)
     if (!email.trim() || !password.trim()) {
       return;
     }
-
+    console.log('email password2', email, password)
     this.responseError = '';
     
     this.userService.getUser(email, password)
     .then((user) => {
+      console.log('user', user)
         if(!user) {
           this.responseError = 'User not found';
           return ;
           
          }
          else {
-          return this.userService.isAdmin()? this.router.navigate(['admin']): this.router.navigate(['']);
+          return this.userService.isAdmin() ? this.router.navigate(['/admin']) : this.router.navigate(['']);
          }
       }
     )

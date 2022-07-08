@@ -1,0 +1,85 @@
+:host {
+  width: 100%;
+}
+
+.login-container {
+  display: block !important;
+  flex-wrap: nowrap !important;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: inherit;
+  padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.authorization-form {
+  max-width: 400px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.authorization-form-logo {
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+
+.forgot-password-block {
+  display: inline-block;
+
+  label {
+    margin: 0 3px 0 3px;
+  }
+}
+
+.btn-login {
+  background-color: #2451E3;
+  border-color: #2451E3;
+  color: #FFFFFF;
+  margin: 0 10px 0 0;
+}
+
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active,
+.btn-login:active:focus,
+.btn-login:active:hover {
+  background-color: #2451E3;
+  border-color: #1F48CF;
+  color: #FFFFFF;
+}
+
+/* Bootstrap buttons style rewrite */
+.has-error .help-block {
+  color: #ff4124;
+}
+
+.has-error .form-control {
+  border-color: #ff4124;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+@media (max-width: 350px) {
+  .forgot-password-block {
+    display: block;
+    text-align: center;
+  }
+}
