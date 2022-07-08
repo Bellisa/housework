@@ -13,11 +13,10 @@ export class AppComponent implements OnInit  {
   constructor(private userService: UserService){}
   ngOnInit(): void {
     
-    this.userService.getUser('Dan', '123123').then(res => {
-      console.log('dan get', res)
-      
-    }
-    )
+    const res2 = this.userService.getUser('Dan', '123123')
+    console.log('dan get', res2);
+    res2.then(r=>console.log)
+    
     this.userService.getUser('Alex', '12341234').then(res => {
       console.log('Alex get', res)
       
